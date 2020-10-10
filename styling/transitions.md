@@ -41,7 +41,9 @@ transitionDuration: ["1s", "300ms"]
 
 Define the name or names of the properties that should be controlled by the transition effect. The transition will begin whenever one of the specified properties change.
 
-#### **Type:** `string | string[]`
+To use multiple properties, use a comma-separated string.
+
+#### **Type:** `string`
 
 **Values:** `"none" | "all" | property`
 
@@ -49,7 +51,8 @@ Define the name or names of the properties that should be controlled by the tran
 
 ```text
 transitionProperty: "all"
-transitionProperty: ["width", "height"]
+transitionProperty: "width, height"
+transitionProperty: ["height", "width"].join(", ")
 ```
 
 ### transitionTimingFunction
